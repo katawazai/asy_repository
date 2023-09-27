@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document of vue js</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <h1>Hellow Vue: index2.html File</h1>
+
+<div id="app">  <!-- DOM -->
+<p>{{ title }}</p>
+<br>
+
+<p> {{  message  }} - {{ title }} - {{  name  }} - {{  age  }} </p> 
+<button v-on:click="age++">Increase Age</button>
+<button v-on:click="age--">Decrease Age</button>
+<!--<div @click="name='Katawazai' ">Change Name</div>-->
+<div @click="changeNameFunction">Change Name</div>
+</div>
+    <script src="app.js"></script>
+
+
+
+
+
+    <script>
+        const app = Vue.createApp({
+          data() {
+            return {
+              message: "Hello World! inner javaScript"
+            }
+          }
+        })
+       app.mount('#app')
+      </script>
+
+
+</body>
+</html>
